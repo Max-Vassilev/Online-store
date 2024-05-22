@@ -1,3 +1,6 @@
 from django.contrib import admin
+from .models import TechItem
 
-# Register your models here.
+@admin.register(TechItem)
+class UserModelAdmin(admin.ModelAdmin):
+    pass

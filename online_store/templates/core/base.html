@@ -1,4 +1,31 @@
+<!-- core/base.html -->
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="en">
-<body>Hello, World!</body>
+<head>
+    <meta charset="UTF-8">
+    <title>Tech Items</title>
+    <link rel="stylesheet" href="{% static 'css/base.css' %}">
+</head>
+<body>
+    <h1>Online Tech Store</h1>
+    <div class="container">
+        <ul class="tech-items">
+            {% for tech_item in tech_items %}
+                <li class="tech-item">
+
+                    <strong>Name:</strong> {{ tech_item.name }}<br>
+                    <strong>Description:</strong> {{ tech_item.description }}<br>
+                    <strong>Price:</strong> ${{ tech_item.price }}<br>
+                    <strong>Category:</strong> {{ tech_item.get_category_display }}<br>
+                    <img src="{{ tech_item.image_url }}" alt="{{ tech_item.name }}">
+
+
+                </li>
+
+            {% endfor %}
+        </ul>
+    </div>
+</body>
 </html>
