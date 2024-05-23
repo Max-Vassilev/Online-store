@@ -1,31 +1,55 @@
-<!-- core/base.html -->
 {% load static %}
 
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Tech Items</title>
+    <title>Max-Tech</title>
     <link rel="stylesheet" href="{% static 'css/base.css' %}">
 </head>
+
+
+
+
 <body>
-    <h1>Online Tech Store</h1>
+
+    <header>
+        <img src="https://ci3.googleusercontent.com/meips/ADKq_NaSEUtUWp9NeBzHmFesgmNozfLZWTYyhCX7Crjb2JivDUs5ITWwxMFAvXgZwdmCMEtyEcTGxFzx0MR0pR1SYczCoExHA1kltqCVlqWKD4U1azZiEnMKSOJCjyefRX1G-zUKYq_AcCdnLG8blRtj2c7exdt3BqgGT3fVT8ev2BuoElZemal9NxvKevIOXp4Hr126ABxt3AQdetIkCDsd0KgeGw=s0-d-e1-ft#https://dynamic.design.com/preview/logodraft/93cb245e-c2a8-478b-b67d-daaf179c32a6/image/large.png?bust=c494d5b2-7982-4e61-9838-57c122e06ed8" alt="">
+        <nav>
+            <!-- <a href="">About</a>
+            <a href=""><i class="fa-solid fa-phone"></i>  Contacts</a> -->
+            <a href=""><i class="fa-solid fa-cart-shopping"></i>  Cart</i></a>
+        </nav>
+    </header>
+
+    <main>
+
     <div class="container">
+
+        <div class="tech-types">
+            <button>Computers</button>
+            <button>Laptops</button>
+            <button>Cell Phones</button>
+            <button>Tablets</button>
+            <button>Others</button>
+        </div>
+
         <ul class="tech-items">
             {% for tech_item in tech_items %}
-                <li class="tech-item">
 
+                <li class="tech-item">
                     <strong>Name:</strong> {{ tech_item.name }}<br>
                     <strong>Description:</strong> {{ tech_item.description }}<br>
                     <strong>Price:</strong> ${{ tech_item.price }}<br>
                     <strong>Category:</strong> {{ tech_item.get_category_display }}<br>
                     <img src="{{ tech_item.image_url }}" alt="{{ tech_item.name }}">
-
-
                 </li>
 
             {% endfor %}
         </ul>
     </div>
+
+    </main>
+
 </body>
 </html>
