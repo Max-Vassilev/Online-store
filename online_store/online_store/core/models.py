@@ -2,11 +2,12 @@ from django.db import models
 
 class TechItem(models.Model):
     CATEGORY_CHOICES = [
-        ('TV', 'TV'),
-        ('Mobile Phone', 'Mobile Phone'),
-        ('PC', 'PC'),
-        ('Laptop', 'Laptop'),
-        ('Other', 'Other'),
+        ('tv', 'tv'),
+        ('computer', 'computer'),
+        ('laptop', 'laptop'),
+        ('phone', 'phone'),
+        ('tablet', 'tablet'),
+        ('other', 'other'),
     ]
 
     name = models.CharField(max_length=255)
