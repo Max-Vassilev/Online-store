@@ -18,44 +18,29 @@
 
     <main>
 
-    <div class="container">
+        <div class="container">
 
-        <div class="tech-types">
-            <a href="{% url 'base page' %}">
-                <button class="{% if current_category == 'all' %}active{% endif %}">All</button>
-            </a>
-            <a href="{% url 'category page' 'tv' %}">
-                <button class="{% if current_category == 'TV' %}active{% endif %}">TV</button>
-            </a>
-            <a href="{% url 'category page' 'computer' %}">
-                <button class="{% if current_category == 'PC' %}active{% endif %}">Computer</button>
-            </a>
-            <a href="{% url 'category page' 'laptop' %}">
-                <button class="{% if current_category == 'Laptop' %}active{% endif %}">Laptop</button>
-            </a>
-            <a href="{% url 'category page' 'phone' %}">
-                <button class="{% if current_category == 'Mobile Phone' %}active{% endif %}">Phone</button>
-            </a>
-            <a href="{% url 'category page' 'tablet' %}">
-                <button class="{% if current_category == 'Tablet' %}active{% endif %}">Tablet</button>
-            </a>
-            <a href="{% url 'category page' 'other' %}">
-                <button class="{% if current_category == 'Other' %}active{% endif %}">Other</button>
-            </a>
+            <div class="tech-types">
+                <a href="{% url 'base page' %}"><button class="{% if current_category == 'all' %}active{% endif %}">All</button></a>
+                <a href="{% url 'category page' 'tv' %}"><button class="{% if current_category == 'TV' %}active{% endif %}">TV</button></a>
+                <a href="{% url 'category page' 'computer' %}"><button class="{% if current_category == 'PC' %}active{% endif %}">Computer</button></a>
+                <a href="{% url 'category page' 'laptop' %}"><button class="{% if current_category == 'Laptop' %}active{% endif %}">Laptop</button></a>
+                <a href="{% url 'category page' 'phone' %}"><button class="{% if current_category == 'Mobile Phone' %}active{% endif %}">Phone</button></a>
+                <a href="{% url 'category page' 'tablet' %}"><button class="{% if current_category == 'Tablet' %}active{% endif %}">Tablet</button></a>
+                <a href="{% url 'category page' 'other' %}"><button class="{% if current_category == 'Other' %}active{% endif %}">Other</button></a>
+            </div>
+
+            <ul class="tech-items">
+                {% for tech_item in tech_items %}
+                    <li class="tech-item">
+                        <div class="item-name">{{ tech_item.name }}</div>
+                        <strong>Price:</strong> ${{ tech_item.price }}<br>
+                        <img src="{{ tech_item.image_url }}" alt="{{ tech_item.name }}">
+                    </li>
+                {% endfor %}
+            </ul>
+
         </div>
-
-        <ul class="tech-items">
-            {% for tech_item in tech_items %}
-                <li class="tech-item">
-                    <strong>Name:</strong> {{ tech_item.name }}<br>
-                    <strong>Description:</strong> {{ tech_item.description }}<br>
-                    <strong>Price:</strong> ${{ tech_item.price }}<br>
-                    <strong>Category:</strong> {{ tech_item.get_category_display }}<br>
-                    <img src="{{ tech_item.image_url }}" alt="{{ tech_item.name }}">
-                </li>
-            {% endfor %}
-        </ul>
-    </div>
 
     </main>
 
