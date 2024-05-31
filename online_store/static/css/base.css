@@ -86,10 +86,11 @@ main {
 
 .tech-items {
     display: grid;
-    grid-template-columns: repeat(7, 1fr);
+    grid-template-columns: repeat(6, 1fr);
     gap: 5px;
     list-style: none;
     padding: 0;
+    margin-top: 40px;
 }
 
 .tech-item {
@@ -100,23 +101,43 @@ main {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 5px;
     text-align: center;
-    height: 225px;
-    width: 200px;
+    height: 270px;
+    width: 235px;
     display: flex; 
     flex-direction: column; 
     justify-content: center;
     align-items: center;
     padding-top: 20px;
     padding-bottom: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 }
 
 .tech-item img {
-    width: 75%;
-    height: 40%; 
+    width: 100%;
+    height: auto;
+    max-width: 150px;
+    max-height: 100px;
     align-self: center;
-    margin-top: auto; 
+    margin-top: 30px;
+    object-fit: contain;
 }
+
+.add-to-cart-btn{
+    background-color: #333;
+    color:  #fff;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 1px solid black;
+    font-size: 15px;
+    width: 60%;
+    height: 10%;
+}
+
+
+.add-to-cart-btn:hover {
+    cursor: pointer;
+}
+
 
 
 
@@ -172,5 +193,30 @@ footer nav a{
 }
 
 footer a:hover {
+    cursor: pointer;
+}
+
+
+.pagination {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.pagination .step-links {
+    display: inline-block;
+}
+
+.pagination .step-links a, .pagination .step-links span {
+    margin: 0 5px;
+    text-decoration: none;
+    color: #333;
+}
+
+.pagination .step-links .current {
+    font-weight: bold;
+    
+}
+
+.pagination .step-links a:hover {
     cursor: pointer;
 }

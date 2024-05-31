@@ -31,14 +31,35 @@
             </div>
 
             <ul class="tech-items">
-                {% for tech_item in tech_items %}
+                {% for tech_item in page_obj %}
                     <li class="tech-item">
                         <div class="item-name">{{ tech_item.name }}</div>
                         <strong>Price:</strong> ${{ tech_item.price }}<br>
                         <img src="{{ tech_item.image_url }}" alt="{{ tech_item.name }}">
+                        <button href="" class="add-to-cart-btn">Add to cart</button>
                     </li>
                 {% endfor %}
             </ul>
+
+            <div class="pagination">
+                <span class="step-links">
+                    {% if page_obj.has_previous %}
+                        <a href="?page={{ page_obj.previous_page_number }}">
+                            <i class="fa-solid fa-arrow-left"></i>
+                        </a>
+                    {% endif %}
+
+                    <span class="current">
+                        Page {{ page_obj.number }} of {{ page_obj.paginator.num_pages }}
+                    </span>
+
+                    {% if page_obj.has_next %}
+                        <a href="?page={{ page_obj.next_page_number }}">
+                            <i class="fa-solid fa-arrow-right"></i>
+                        </a>
+                    {% endif %}
+                </span>
+            </div>
 
         </div>
 

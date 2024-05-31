@@ -14,7 +14,7 @@ class TechItem(models.Model):
     description = models.TextField()
     price = models.DecimalField(max_digits=10, decimal_places=2)
     category = models.CharField(max_length=100, choices=CATEGORY_CHOICES)
-    image_url = models.URLField(max_length=200, blank=True)  
+    image_url = models.URLField()  
 
     def __str__(self):
         return self.name
