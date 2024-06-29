@@ -1,7 +1,7 @@
 # Online-store
 
-<img width="700" alt="image" src="https://github.com/Max-Vassilev/Online-store/assets/106106321/ce8261cc-7bdd-4604-bd87-45f3d5fd9524">
+<img width="700" alt="image" src="https://github.com/Max-Vassilev/Online-store/assets/106106321/07388a6c-d5b0-4370-9133-35d47799f5a5">
 
-<img width="700" alt="image" src="https://github.com/Max-Vassilev/Online-store/assets/106106321/633b7ef1-ac66-4955-843f-9e46429368fc">
+<img width="700" alt="image" src="https://github.com/Max-Vassilev/Online-store/assets/106106321/fcc3a40c-4f54-47f6-8905-46556a643f38">
 
-<img width="700" alt="image" src="https://github.com/Max-Vassilev/Online-store/assets/106106321/8a5680f7-f805-4e8e-a5ee-cde1655fdbf8">
+<img width="700" alt="image" src="https://github.com/Max-Vassilev/Online-store/assets/106106321/00ba0a43-1530-479b-bc16-6804e86a4b6b">
