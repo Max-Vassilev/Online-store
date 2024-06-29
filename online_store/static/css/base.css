@@ -19,6 +19,7 @@ header {
     top: 0; 
     left: 0; 
     right: 0;
+    
 }
 
 header img {
@@ -56,7 +57,7 @@ header nav a {
 }
 
 main {
-    height: 140vh;
+    height: 110vh;
     margin-top: 150px;
 }
 
@@ -101,25 +102,27 @@ main {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     padding: 5px;
     text-align: center;
-    height: 270px;
+    height: 205px;
     width: 235px;
     display: flex; 
     flex-direction: column; 
     justify-content: center;
     align-items: center;
-    padding-top: 20px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     margin-bottom: 30px;
+    
 }
 
 .tech-item img {
-    width: 100%;
-    height: auto;
+    width: 90%;
+    height:auto;
     max-width: 150px;
     max-height: 100px;
     align-self: center;
     margin-top: 30px;
     object-fit: contain;
+    margin: 5px;
 }
 
 .add-to-cart-btn{
@@ -139,12 +142,21 @@ main {
 }
 
 
-
-
 .item-name{
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 700;
     margin-bottom: 20px;
+    height: 7%;
+    margin: 5px;
+}
+
+.item-price{
+    font-size: 14px;
+    font-weight: 500;
+    width: 100%;
+    margin-bottom: 20px;
+    height: 7%;
+    margin: 5px;
 }
 
 
@@ -152,45 +164,26 @@ main {
     margin: 10px 0;
 }
 
+
 footer {
     background-color: #333;
     color: #fff;
-    padding: 20px 0;
     text-align: center;
+    padding: 10px 0;
+    position: relative;
     width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-
+    bottom: 0;
 }
 
-footer nav{
-    width: 40%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-}
-
-footer nav a{
-    color: black;
-    height: 40px;
+footer nav a {
+    color: #fff;
     text-decoration: none;
-    margin: 0 15px;
-    font-size: 1.2em;
-    background-color: #ffffff;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    font-size: 17px;
-    padding: 7px;
-    border-radius: 15px;
-    border: 1px solid black;
-    width: 12%;
+    margin: 0 10px;
+    font-size: 16px;
+    transition: color 0.3s;
 }
+
+
 
 footer a:hover {
     cursor: pointer;

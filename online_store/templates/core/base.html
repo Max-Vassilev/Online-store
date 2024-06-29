@@ -19,6 +19,7 @@
     <main>
 
         <div class="container">
+        
 
             <div class="tech-types">
                 <a href="{% url 'base page' %}"><button class="{% if current_category == 'all' %}active{% endif %}">All</button></a>
@@ -34,7 +35,7 @@
                 {% for tech_item in page_obj %}
                     <li class="tech-item">
                         <div class="item-name">{{ tech_item.name }}</div>
-                        <strong>Price:</strong> ${{ tech_item.price }}<br>
+                        <div class="item-price">Price: ${{ tech_item.price }}</div>
                         <img src="{{ tech_item.image_url }}" alt="{{ tech_item.name }}">
                         <button href="" class="add-to-cart-btn">Add to cart</button>
                     </li>
@@ -67,8 +68,8 @@
 
     <footer>
         <nav>
-            <a href=""><i class="fa-solid fa-address-card"></i> &nbsp;About</a>
-            <a href=""><i class="fa-solid fa-phone"></i> &nbsp;Contacts</a>
+            <a href="{% url 'about' %}"><i class="fa-solid fa-address-card"></i> &nbsp;About</a>
+            <a href="#"><i class="fa-solid fa-phone"></i> &nbsp;Contacts</a>
         </nav>
     </footer>
 
