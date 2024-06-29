@@ -25,3 +25,6 @@ class BasePageView(views.TemplateView):
     
 class AboutPageView(views.TemplateView):
     template_name = 'core/about.html'
+
+class ContactsPageView(views.TemplateView):
+    template_name = 'core/contacts.html'
