@@ -1,5 +1,5 @@
 from django.db import models
-from online_store.core.models import TechItem
+from online_store.store.models import TechItem
 
 class Cart(models.Model):
     created_at = models.DateTimeField(auto_now_add=True)

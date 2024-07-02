@@ -22,13 +22,13 @@
         
 
             <div class="tech-types">
-                <a href=""><button class="{% if current_category == 'all' %}active{% endif %}">All</button></a>
-                <a href=""><button class="{% if current_category == 'TV' %}active{% endif %}">TV</button></a>
-                <a href=""><button class="{% if current_category == 'PC' %}active{% endif %}">Computer</button></a>
-                <a href=""><button class="{% if current_category == 'Laptop' %}active{% endif %}">Laptop</button></a>
-                <a href=""><button class="{% if current_category == 'Mobile Phone' %}active{% endif %}">Phone</button></a>
-                <a href=""><button class="{% if current_category == 'Tablet' %}active{% endif %}">Tablet</button></a>
-                <a href=""><button class="{% if current_category == 'Other' %}active{% endif %}">Other</button></a>
+                <a href="{% url 'base_page' %}"><button>All</button></a>
+                <a href="{% url 'category_page' category='tv' %}"><button>TV</button></a>
+                <a href="{% url 'category_page' category='computer' %}"><button>Computer</button></a>
+                <a href="{% url 'category_page' category='laptop' %}"><button>Laptop</button></a>
+                <a href="{% url 'category_page' category='phone' %}"><button>Phone</button></a>
+                <a href="{% url 'category_page' category='tablet' %}"><button>Tablet</button></a>
+                <a href="{% url 'category_page' category='other' %}"><button>Other</button></a>
             </div>
 
             <ul class="tech-items">

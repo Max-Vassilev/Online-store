@@ -38,7 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     # My apps:
-    'online_store.core',
+    'online_store.store',
     'online_store.cart'
 
 ]
