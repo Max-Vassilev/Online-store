@@ -22,8 +22,12 @@ class BasePageView(views.TemplateView):
         context['current_category'] = category
 
         return context
-
     
+class ProductDetailView(views.DetailView):
+    model = TechItem
+    template_name = 'store/product_details.html'
+    context_object_name = 'tech_item'
+
 class AboutPageView(views.TemplateView):
     template_name = 'store/about.html'
 

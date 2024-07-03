@@ -1,4 +1,10 @@
-from django.views import generic as views
+from django.shortcuts import render
 
-class CartSummary(views.TemplateView):
-    template_name = 'cart/summary.html'
+def cart_summary(request):
+    return render(request, 'cart/summary.html', {})
+
+def cart_add(request):
+    pass
+
+def cart_delete(request):
+    pass
