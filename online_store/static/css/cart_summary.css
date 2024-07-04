@@ -56,11 +56,6 @@ header nav a {
     border: 1px solid black;
 }
 
-header nav a:hover{
-    background-color: #a0a0a0;
-    color: white
-}
-
 main {
     height: 90vh;
     margin-top: 90px;
