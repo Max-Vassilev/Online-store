@@ -85,25 +85,25 @@ main {
     height: 50%;
 }
 
-.add-to-cart{
+
+.container form{
     width: 30%;
-    height: 8%;
-    border: 1px solid black;
-    border-radius: 4px;
-    background-color: #333;
-    color: white;
+    height: 10%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    text-decoration: none;
 }
 
-.add-to-cart:hover{
-    background-color: #a3a3a3;
-    color: black;
+.container form button{
+    height: 80%;
+    width: 80%;
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 7px;
+    font-size: 14px;
+
 }
-
-
 
 footer {
     background-color: #333;
