@@ -93,16 +93,19 @@ main {
     justify-content: center;
 }
 
-.container form button{
-    height: 80%;
-    width: 80%;
+.add-to-cart{
+    height: 7%;
+    width: 15%;
     background-color: #333;
     color: white;
     padding: 10px;
     border: 1px solid black;
     border-radius: 7px;
     font-size: 14px;
+}
 
+.add-to-cart:hover{
+    cursor: pointer;
 }
 
 footer {

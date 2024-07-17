@@ -25,8 +25,8 @@ class BasePageView(views.TemplateView):
     
 class ProductDetailView(views.DetailView):
     model = TechItem
-    template_name = 'store/product_details.html'
-    context_object_name = 'tech_item'
+    template_name = 'store/product.html'
+    context_object_name = 'product'
 
 class AboutPageView(views.TemplateView):
     template_name = 'store/about.html'

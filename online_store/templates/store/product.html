@@ -1,0 +1,55 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{ product.name }} - Max-Tech</title>
+    <link rel="stylesheet" href="{% static 'css/product.css' %}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script> <!-- Ensure jQuery is included -->
+</head>
+<body>
+    <header>
+        <img src="https://ci3.googleusercontent.com/meips/ADKq_NaSEUtUWp9NeBzHmFesgmNozfLZWTYyhCX7Crjb2JivDUs5ITWwxMFAvXgZwdmCMEtyEcTGxFzx0MR0pR1SYczCoExHA1kltqCVlqWKD4U1azZiEnMKSOJCjyefRX1G-zUKYq_AcCdnLG8blRtj2c7exdt3BqgGT3fVT8ev2BuoElZemal9NxvKevIOXp4Hr126ABxt3AQdetIkCDsd0KgeGw=s0-d-e1-ft#https://dynamic.design.com/preview/logodraft/93cb245e-c2a8-478b-b67d-daaf179c32a6/image/large.png?bust=c494d5b2-7982-4e61-9838-57c122e06ed8" alt="">
+        <nav>
+            <a href=""><i class="fa-solid fa-cart-shopping"></i> &nbsp; Cart</a>
+        </nav>
+    </header>
+    <main>
+        <div class="container">
+            <h1>{{ product.name }}</h1>
+            <img src="{{ product.image_url }}" alt="{{ product.name }}">
+            <div class="item-price">Price: ${{ product.price }}</div>
+            <div class="item-description">{{ product.description }}</div>
+            <button class="add-to-cart" value="{{ product.id }}" id="add-cart">Add To Cart</button>
+        </div>
+    </main>
+    <footer>
+        <nav>
+            <a href="/"><i class="fa-solid fa-house"></i> &nbsp;Home</a>
+            <a href="{% url 'about' %}"><i class="fa-solid fa-address-card"></i> &nbsp;About</a>
+            <a href="{% url 'contacts' %}"><i class="fa-solid fa-phone"></i> &nbsp;Contacts</a>
+        </nav>
+    </footer>
+    <script>
+        $(document).on("click", "#add-cart", function(e){
+            e.preventDefault();
+            $.ajax({
+                type: "POST",
+                url: "{% url 'cart_add' %}",
+                data: {
+                    product_id: $("#add-cart").val(),
+                    csrfmiddlewaretoken: "{{ csrf_token }}",
+                    action: 'post'
+                },
+                success: function(json){
+                    console.log(json);
+                },
+                error: function(xhr, errmsg, err){
+                    console.log(xhr.status + ": " + xhr.responseText);
+                }
+            });
+        });
+    </script>
+</body>
+</html>
